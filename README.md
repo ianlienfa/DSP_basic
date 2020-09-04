@@ -17,6 +17,8 @@ Transformation plays an important part of digital signal processing(DSP), and th
 
 ## → Time Stretching
 
+Link to code: [https://github.com/ianlienfa/DSP_basic/blob/master/time_stretching.py](https://github.com/ianlienfa/DSP_basic/blob/master/time_stretching.py)
+
 **How we save sound files in computer:**
 
 We know that sound wave is continuous, but computers only save discrete data.
@@ -90,6 +92,8 @@ wv.write("s440_x.5.wav", framedata["sample_rate"], scale_audio)
 
 # → Pitch Shifting
 
+Link to code: [https://github.com/ianlienfa/DSP_basic/blob/master/pitch_shifting.py](https://github.com/ianlienfa/DSP_basic/blob/master/pitch_shifting.py)
+
 There are many ways to achive pitch shifting, here we use a quite simple procedure based on SOLA:
 
 Recall that we can stretch signal by changing the sample rate, but will also affect the frequency:
@@ -153,6 +157,8 @@ An Octave higher (2x frequency)
 
 # → Noise Reduction — using spectral subtraction
 
+Link to code: [https://github.com/ianlienfa/DSP_basic/blob/master/spectral_rdc.py](https://github.com/ianlienfa/DSP_basic/blob/master/spectral_rdc.py)
+
 There're also tons of ways to reduce the noise inside a sound file,one of the often used technique is called spectral subtraction
 
 Spectral Subtraction Requires two input, the noisy sound file and the noise segment file.
@@ -177,6 +183,8 @@ To gain more flexibility, here's another method.
 
 # → Noise Reduction — using Wavelet Transform
 
+Link to code: [https://github.com/ianlienfa/DSP_basic/blob/master/wavelet_rdc.py](https://github.com/ianlienfa/DSP_basic/blob/master/wavelet_rdc.py)
+
 There are many kinds of transformation to make it easier to make adjustments on signals, the most common one is Fourier Transform, which interprets a signal into many sin and cos waves. There exists another fashion, which interprets signal into many "wavelets".
 
 The object of descibing signal using wavelets is to "roughly" depict the sound wave using wavelet, when we abandon some small details leading to noises, the sound becomes clearer.
@@ -196,3 +204,12 @@ Sound File After Spectral Subtraction (Notice the high frequency noise)
 Sound File After Wavelet Trasform Denoising
 
 [Audio%20Processing%204cc756f8304140b4a3f0a1cecbf17d21/lecture_wavlet.wav](Audio%20Processing%204cc756f8304140b4a3f0a1cecbf17d21/lecture_wavlet.wav)
+
+References:
+
+- **DAFX: Digital Audio Effects, Second Edition,** by Udo Zölzer
+- **The Scientist and Engineer's Guide toDigital Signal Processing,** by Steven W. Smith, Ph.D.
+- Stephan Bernsee's Blog, [http://blogs.zynaptiq.com/bernsee/](http://blogs.zynaptiq.com/bernsee/)
+- Guitar Pitch Shifter, [http://www.guitarpitchshifter.com/algorithm.html#33](http://www.guitarpitchshifter.com/algorithm.html#33)
+- **A Tutorial of the Wavelet Transform,** by ****Chun-Lin, Liu
+- **Speech denoising using discrete wavelet packet decomposition technique,** by Oktar, Mehmet Alper ; Nibouche, Mokhtar ; Baltaci, Yusuf
